@@ -57,7 +57,8 @@ class UserApplication extends \samson\cms\App
             $db_user->save();
 
             // Refresh session user object
-            auth()->update($db_user);
+            //auth()->update($db_user);
+            // TODO: Change to new social_* logic
         }
         return array ('status' => 1);
     }
