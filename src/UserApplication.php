@@ -56,7 +56,8 @@ class UserApplication extends \samson\cms\App
             $db_user->save();
 
             // Refresh session user object
-            if ($_SESSION['auth_user_id'] == $db_user['UserID']) {
+            $auth_user_id = unserialize($_SESSION[m('socialemail')->identifier()]);
+            if ($auth_user_id['UserID'] == $db_user['UserID']) {
                 m('socialemail')->update($db_user);
             }
         }
