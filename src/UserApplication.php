@@ -7,11 +7,11 @@ namespace samson\cms\web\user;
  */
 class UserApplication extends \samson\cms\App
 {
-	/** @var string Application name */
-	public $name = 'Пользователи';
+    /** @var string Application name */
+    public $name = 'Пользователи';
 
-	/** @var string Module identifier */
-	protected $id = 'user';
+    /** @var string Module identifier */
+    protected $id = 'user';
 
     /**
      * Universal controller
@@ -43,22 +43,22 @@ class UserApplication extends \samson\cms\App
             if (!dbQuery('user')->UserID($_POST['UserID'])->Active(1)->first($db_user)) {
                 $db_user = new \samson\activerecord\user(false);
             }
-
             // Save user data from form
-            $db_user->Created 		= ( $_POST['Created'] == 0 ) ? date('Y-m-d H:i:s') : $_POST['Created'];
-            $db_user->FName 	= $_POST['FName'];
-            $db_user->SName 	= $_POST['SName'];
-            $db_user->TName 	= $_POST['TName'];
-            $db_user->Password 	= $_POST['Password'];
-            $db_user->Email 	= $_POST['Email'];
+            $db_user->Created 	    = ( $_POST['Created'] == 0 ) ? date('Y-m-d H:i:s') : $_POST['Created'];
+            $db_user->FName 	    = $_POST['FName'];
+            $db_user->SName 	    = $_POST['SName'];
+            $db_user->TName 	    = $_POST['TName'];
+            $db_user->Password  	= $_POST['Password'];
+            $db_user->Email 	    = $_POST['Email'];
             $db_user->md5_password 	= md5($_POST['Password']);
             $db_user->md5_email 	= md5($_POST['Email']);
             $db_user->Active		= 1;
             $db_user->save();
 
             // Refresh session user object
-            //auth()->update($db_user);
-            // TODO: Change to new social_* logic
+            if ($_SESSION['auth_user_id'] == $db_user['UserID']) {
+                m('socialemail')->update($db_user);
+            }
         }
         return array ('status' => 1);
     }
