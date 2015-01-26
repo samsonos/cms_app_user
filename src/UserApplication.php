@@ -8,7 +8,7 @@ namespace samson\cms\web\user;
 class UserApplication extends \samson\cms\App
 {
     /** @var string Application name */
-    public $name = 'Пользователи';
+    public $app_name = 'Пользователи';
 
     /** @var string Module identifier */
     protected $id = 'user';
