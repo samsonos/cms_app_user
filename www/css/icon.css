@@ -1,14 +1,11 @@
-/* Иконка "Ключик" */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅ" */
 .icon-key { background-image: url('../img/anykey.png'); }
 .icon-key.hover,
 .icon-key:hover { background-image: url('../img/anykey_hover.png'); }
 .icon-key.active,
 .icon-key:active { background-image: url('../img/anykey_active.png'); }
 
-/* Иконка "Пользователь" */
-.icon-user { background-image: url('../img/user.png'); }
-
-/* Иконка "Добавить пользователя" */
+/* пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" */
 .icon-add-user { background-image: url('../img/user_add.png'); }
 .icon-add-user.hover,
 .icon-add-user:hover { background-image: url('../img/user_add_hover.png'); }
