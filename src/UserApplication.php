@@ -11,7 +11,7 @@ class UserApplication extends \samson\cms\App
     public $name = 'Пользователи';
 
     /** @var string Application icon */
-    public $icon = 'fa-user';
+    public $icon = 'user';
 
 
     /** @var string Module identifier */
