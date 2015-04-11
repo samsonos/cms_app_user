@@ -1,11 +1,11 @@
 <?php
-namespace samson\cms\web\user;
+namespace samsoncms\app\user;
 
 /**
- * Class UserApplication
+ * Class Application
  * @package samson\cms\web\user
  */
-class UserApplication extends \samson\cms\App
+class Application extends \samson\cms\App
 {
     /** @var string Application name */
     public $name = 'Пользователи';

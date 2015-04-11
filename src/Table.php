@@ -1,5 +1,5 @@
 <?php
-namespace samson\cms\web\user;
+namespace samsoncms\app\user;
 
 use samson\pager\Pager;
 

@@ -9,8 +9,8 @@
     "homepage":"http://samsonos.com/",
     "autoload": {
         "classmap": ["src/"],
-        "psr-0": {
-            "samsonos\\cms\\web\\user": "src/"
+        "psr-4": {
+            "samsoncms\\app\\user": "src/"
         }
     }
 }
